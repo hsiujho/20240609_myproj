@@ -1,0 +1,15 @@
+{
+  "hash": "f2e58080aeb40c4b1c63311fbe5bd777",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Pairing {quarto-shinylive} and {quarto-webr}\nformat:\n  html:\n    resources: \n      - shinylive-sw.js\nengine: knitr\nfilters:\n  - webr\n  - shinylive\n---\n\n\n\n## `{quarto-shinylive}`\n\n```{shinylive-r}\n#| standalone: true\nlibrary(shiny)\n\nui <- fluidPage(\n   titlePanel(\"Hello Shiny!\")\n)\n\nserver <- function(input, output, session) {\n  # code\n}\n\nshinyApp(ui, server)\n```\n\n## `{quarto-webr}`\n\n\n### Interactive\n\n```{webr-r}\nprint(\"Hello {quarto-webr} world!\")\n```\n\n### Non-interactive\n\n```{webr-r}\n#| context: output\ncat(\"And, this is a non-interactive cell\", fill = TRUE)\n```",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
